@@ -1,4 +1,4 @@
-<img width="406" height="506" alt="image" src="https://github.com/user-attachments/assets/65229243-3034-4426-bc69-53992f4dbcc4" /># Zenmap Lab Report: Host Discovery on a Local Network
+Report: Host Discovery on a Local Network
 
 **W2-PM5: Network Scanning with Zenmap** | Cybersecurity & Ethical Hacking Internship, Networkwalks
 
