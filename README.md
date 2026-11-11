@@ -1,4 +1,4 @@
-# Zenmap Lab Report: Host Discovery on a Local Network
+<img width="406" height="506" alt="image" src="https://github.com/user-attachments/assets/65229243-3034-4426-bc69-53992f4dbcc4" /># Zenmap Lab Report: Host Discovery on a Local Network
 
 **W2-PM5: Network Scanning with Zenmap** | Cybersecurity & Ethical Hacking Internship, Networkwalks
 
@@ -73,7 +73,8 @@ My computer also has a second network adapter on 192.168.223.x. It was not part 
 I downloaded the installer from the official Nmap website ([nmap.org](https://nmap.org)) and installed Zenmap with the default components. The installed version is Zenmap 7.80.
 
 <p align="center">
-  <img src="images/01-zenmap-version.png" alt="Zenmap Help > About window showing version 7.80" width="300">
+  <img width="406" height="506" alt="image" src="https://github.com/user-attachments/assets/abd9c5a3-1acf-441f-89cb-5150e363cdf9" />
+
   <br><em>Figure 1: Help > About in Zenmap, showing version 7.80</em>
 </p>
 
@@ -82,7 +83,8 @@ I downloaded the installer from the official Nmap website ([nmap.org](https://nm
 I ran `ipconfig /all` in Command Prompt. On the Wi-Fi adapter my IPv4 address is 192.168.88.231 with subnet mask 255.255.255.0, which is /24. This gives the target subnet 192.168.88.0/24.
 
 <p align="center">
-  <img src="images/02-ipconfig-wifi-adapter.png" alt="ipconfig /all output for the Wi-Fi adapter" width="600">
+  <img width="781" height="358" alt="image" src="https://github.com/user-attachments/assets/67de4ec8-dbd2-41ab-bf1f-3516713f8a45" />
+
   <br><em>Figure 2: ipconfig /all output for the Wi-Fi adapter</em>
 </p>
 
@@ -91,7 +93,8 @@ I ran `ipconfig /all` in Command Prompt. On the Wi-Fi adapter my IPv4 address is
 In Zenmap I entered `192.168.88.1/24` in the Target box and selected the Ping scan profile, which runs `nmap -sn 192.168.88.1/24`. Because of the /24 mask, Nmap scanned the whole 192.168.88.0/24 network (256 addresses). The scan started at 16:12 EAT on 11 November 2026 and completed in 17.78 seconds.
 
 <p align="center">
-  <img src="images/03-zenmap-ping-scan-output.png" alt="Zenmap Nmap Output tab showing the ping scan results" width="500">
+ <img width="625" height="619" alt="image" src="https://github.com/user-attachments/assets/ebf33071-05ab-4535-9f03-83c255052562" />
+
   <br><em>Figure 3: Zenmap ping scan output</em>
 </p>
 
@@ -188,13 +191,15 @@ Nmap done: 256 IP addresses (5 hosts up) scanned in 17.78 seconds
 ### B. ipconfig /all output
 
 <p align="center">
-  <img src="images/04-ipconfig-all-full.png" alt="Full ipconfig /all output showing the Wi-Fi adapter details" width="600">
+  <img width="750" height="592" alt="image" src="https://github.com/user-attachments/assets/ce269d48-e552-46f2-9ece-f4bd2e4f6c1e" />
+
   <br><em>Figure 4: ipconfig /all output showing the Wi-Fi adapter details</em>
 </p>
 
 ### C. Network topology
 
 <p align="center">
-  <img src="images/05-zenmap-topology.png" alt="Zenmap topology view showing the five live hosts connected to localhost" width="600">
+  <img width="750" height="508" alt="image" src="https://github.com/user-attachments/assets/4e50814a-555d-4880-83ff-6980bcd04b7f" />
+
   <br><em>Figure 5: Zenmap topology of the five live hosts</em>
 </p>
