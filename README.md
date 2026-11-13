@@ -70,8 +70,8 @@ I performed reconnaissance against the networkwalks.com domain, the instructor-a
 The registrar's WHOIS server also returned a notice that it is being retired in favour of RDAP, which is noted as a limitation below.
 
 <p align="center">
-  <img src="images/pm1-02-whois-output.png" alt="whois output for networkwalks.com" width="600">
-  <br><em>Figure 1: whois output for networkwalks.com</em>
+  <img width="624" height="615" alt="image" src="https://github.com/user-attachments/assets/7a38dbfc-e238-4c26-9315-e49adc7be40c" />
+
 </p>
 
 **How this matters:** whois reveals the registrar, registration/expiry dates, and name servers. The name servers point to Hostgator, so this instantly reveals the hosting provider. The registrant's own contact details are hidden behind a privacy proxy, so no personal information was exposed.
@@ -81,7 +81,7 @@ The registrar's WHOIS server also returned a notice that it is being retired in 
 `whatweb networkwalks.com` was run to identify the technologies running on the site.
 
 <p align="center">
-  <img src="images/pm1-03-whatweb-output.png" alt="whatweb output for networkwalks.com" width="600">
+  <img width="624" height="439" alt="image" src="https://github.com/user-attachments/assets/8fed29db-12f1-4791-b8a6-785c3a7db7e6" />
   <br><em>Figure 2: whatweb output for networkwalks.com</em>
 </p>
 
@@ -94,7 +94,7 @@ The result identified **WordPress 7.1.4** and **WordPress Download Manager 3.3.7
 `nslookup networkwalks.com` was run to resolve the domain name using DNS.
 
 <p align="center">
-  <img src="images/pm1-04-nslookup-output.png" alt="nslookup output for networkwalks.com" width="500">
+  <img width="624" height="307" alt="image" src="https://github.com/user-attachments/assets/212005d0-aa27-49f9-bff8-d652980cce1d" />
   <br><em>Figure 3: nslookup output for networkwalks.com</em>
 </p>
 
@@ -107,7 +107,7 @@ The result returned IP address **192.232.216.135**, which matches the IP that wh
 `curl -I https://networkwalks.com` was run to inspect the HTTP response headers without downloading the page body.
 
 <p align="center">
-  <img src="images/pm1-05-curl-headers.png" alt="curl -I output for networkwalks.com" width="600">
+   <img width="624" height="447" alt="image" src="https://github.com/user-attachments/assets/a22c0f4b-8b3b-4d54-a93a-b51aa08a0b20" />
   <br><em>Figure 4: curl -I output for networkwalks.com (run inside the VirtualBox Kali VM)</em>
 </p>
 
@@ -120,7 +120,7 @@ The response confirmed an **Apache** server, and exposed the WordPress REST API 
 `wafw00f networkwalks.com` was run to check whether a firewall is protecting the site.
 
 <p align="center">
-  <img src="images/pm1-06-wafw00f-output.png" alt="wafw00f output for networkwalks.com" width="500">
+  <img width="624" height="415" alt="image" src="https://github.com/user-attachments/assets/c717b284-7c0e-4122-8378-4be885cb2c2f" />
   <br><em>Figure 5: wafw00f output for networkwalks.com</em>
 </p>
 
@@ -133,7 +133,7 @@ The result identified **ModSecurity (SpiderLabs)** as the active WAF, using 2 re
 `dnsrecon -d networkwalks.com` was run to enumerate the domain's DNS records.
 
 <p align="center">
-  <img src="images/pm1-07-dnsrecon-output.png" alt="dnsrecon output for networkwalks.com" width="600">
+  <img width="624" height="606" alt="image" src="https://github.com/user-attachments/assets/335b428d-e20d-4299-b181-8695e767d837" />
   <br><em>Figure 6: dnsrecon output for networkwalks.com</em>
 </p>
 
@@ -148,12 +148,12 @@ For the second activity, I used Zenmap to perform host discovery on my own home 
 I first used `ipconfig /all` to identify my local IP address and LAN subnet, then entered the subnet into Zenmap and ran the Ping scan profile (`nmap -sn`) to identify active hosts. I ran this scan four times over two days while confirming my results; the scan below, at 16:12 EAT on 11 November 2026, is the one used for this report.
 
 <p align="center">
-  <img src="images/pm5-02-ipconfig-wifi-adapter.png" alt="ipconfig /all output showing IPv4 address and subnet mask" width="550">
+  <img width="500" height="229" alt="image" src="https://github.com/user-attachments/assets/703d6231-c123-4df2-b80d-b1061d88ae92" />
   <br><em>Figure 7: ipconfig /all output showing my IPv4 address and subnet mask</em>
 </p>
 
 <p align="center">
-  <img src="images/pm5-03-zenmap-ping-scan-output.png" alt="Zenmap ping scan output" width="500">
+  <img width="400" height="396" alt="image" src="https://github.com/user-attachments/assets/3023faee-c607-48df-bc1d-6695926d056d" />
   <br><em>Figure 8: Zenmap ping scan output (nmap -sn 192.168.88.1/24)</em>
 </p>
 
@@ -172,7 +172,7 @@ Checking each MAC address, only the router's (18:FD:74:8A:B3:CF) is a standard m
 Finally, I opened the Topology tab, enabled the legend, and saved the network topology in PDF format as required by the practical task.
 
 <p align="center">
-  <img src="images/pm5-05-zenmap-topology.png" alt="Zenmap topology of the five live hosts" width="550">
+  <img width="480" height="325" alt="image" src="https://github.com/user-attachments/assets/5a05a59f-db33-446a-b2a8-a063742f6da2" />
   <br><em>Figure 9: Zenmap topology of the five live hosts</em>
 </p>
 
@@ -227,7 +227,7 @@ Both exercises showed me that information gathering, whether from public domain 
 ### A. W2-PM1 — Footprinting networkwalks.com
 
 <p align="center">
-  <img src="images/pm1-01-whois-date.png" alt="date confirming the lab start time" width="350">
+  <img width="624" height="493" alt="image" src="https://github.com/user-attachments/assets/4f0df5e2-b9bd-416c-bc3b-f81406eece59" />
   <br><em>A1: date confirming the lab start time (14:01 EAT, 12 Nov 2026)</em>
 </p>
 
@@ -278,11 +278,11 @@ Nmap done: 256 IP addresses (5 hosts up) scanned in 17.78 seconds
 ```
 
 <p align="center">
-  <img src="images/pm5-01-zenmap-version.png" alt="Zenmap Help > About showing version 7.80" width="260">
+  <img width="260" height="324" alt="image" src="https://github.com/user-attachments/assets/65d904fa-a43d-4324-9122-e7cbeaa26844" />
   <br><em>B1: Zenmap Help &gt; About, confirming version 7.80</em>
 </p>
 
 <p align="center">
-  <img src="images/pm5-04-ipconfig-all-full.png" alt="Full ipconfig /all output" width="500">
+  <img width="480" height="379" alt="image" src="https://github.com/user-attachments/assets/6345b1a3-d861-4727-9282-0baed53324f1" />
   <br><em>B2: full ipconfig /all output</em>
 </p>
